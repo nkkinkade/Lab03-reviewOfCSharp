@@ -45,7 +45,9 @@ namespace Challenges
         public static int[] ConvertStringToNumbers(string input)
         {
             string[] numsCut = input.Split(' ');
-            int[] numberArray = Array.ConvertAll(numsCut, n => int.Parse(n));
+            int[] numberArray = Array.ConvertAll(numsCut, n => {
+                return int.Parse(n);
+            });
             return numberArray;
         }
 
